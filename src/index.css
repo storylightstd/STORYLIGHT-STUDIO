@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #080D1A;
+    color: #F5F2EB;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Custom delicate styling */
+.border-gold-subtle {
+  border-color: rgba(212, 175, 55, 0.18);
+}
+
+.bg-gold-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.12), transparent 70%);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FBF4DE 0%, #D4AF37 50%, #B88B2A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass-card {
+  background-color: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.glass-card-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-card-hover:hover {
+  background-color: rgba(19, 30, 51, 0.9);
+  border-color: rgba(212, 175, 55, 0.35);
+  transform: translateY(-2px);
+}

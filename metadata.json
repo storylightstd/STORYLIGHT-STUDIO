@@ -1,0 +1,6 @@
+{
+  "name": "Storylight Studios",
+  "description": "Specialist book-growth and creative production consultancy for authors, offering visibility strategy, Amazon and Goodreads support, cinematic book trailers, author branding, and publishing support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

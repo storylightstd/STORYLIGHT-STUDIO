@@ -1,0 +1,18 @@
+{
+  "routes": [
+    {"path":"/","title":"Storylight Studios"},
+    {"path":"/#about","title":"About Storylight Studios"},
+    {"path":"/#services","title":"Author Services"},
+    {"path":"/#portfolio","title":"Book Trailers and Author Branding Portfolio"},
+    {"path":"/#testimonials","title":"Author Testimonials"},
+    {"path":"/#team","title":"The 13-Person Team"},
+    {"path":"/#trust-ethics","title":"Trust and Ethics"},
+    {"path":"/#process","title":"Our Process"},
+    {"path":"/#resources","title":"Author Resources"},
+    {"path":"/#case-studies","title":"Case Studies"},
+    {"path":"/#faq","title":"Frequently Asked Questions"},
+    {"path":"/#audit","title":"Author Marketing Audit"},
+    {"path":"/#leave-a-review","title":"Leave an Author Review"},
+    {"path":"/#contact","title":"Contact Storylight Studios"}
+  ]
+}
