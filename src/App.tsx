@@ -4,6 +4,7 @@
  */
 
 import React, { useEffect, useState } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { PageId, PortfolioItem } from './types';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
@@ -195,6 +196,7 @@ export default function App() {
         }}
       />
       <SageAssistant />
+      <SpeedInsights />
     </div>
   );
 }
