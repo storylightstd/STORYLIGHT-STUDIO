@@ -52,11 +52,23 @@ export const Contact: React.FC<ContactProps> = ({
     e.preventDefault();
     if (!authorName || !email) return;
 
+    const subject = `Storylight inquiry from ${authorName}${bookTitle ? ` — ${bookTitle}` : ''}`;
+    const body = [
+      `Author: ${authorName}`,
+      `Email: ${email}`,
+      `Book / series: ${bookTitle || 'Not provided'}`,
+      `Genre: ${genre || 'Not provided'}`,
+      `Release stage: ${stage}`,
+      `Service focus: ${serviceFocus || 'Not provided'}`,
+      `Book link or ASIN: ${bookLink || 'Not provided'}`,
+      '',
+      message || 'No additional message provided.',
+    ].join('\n');
+
     setSubmitting(true);
-    setTimeout(() => {
-      setSubmitting(false);
-      setIsSubmitted(true);
-    }, 700);
+    window.location.href = `mailto:info@storylightstd.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setSubmitting(false);
+    setIsSubmitted(true);
   };
 
   return (
@@ -85,23 +97,23 @@ export const Contact: React.FC<ContactProps> = ({
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
                 <h3 className="text-2xl font-editorial font-bold text-white">
-                  Diagnostic Inquiry Received
+                  Your email draft is ready
                 </h3>
                 <p className="text-sm text-[#CBD5E1] max-w-md mx-auto leading-relaxed">
-                  Thank you, <strong className="text-white">{authorName}</strong>. Your book details for{' '}
-                  <strong className="text-white font-editorial italic">"{bookTitle || 'Your Upcoming Book'}"</strong>{' '}
-                  have been transmitted directly to Hannah Cooper and our data intelligence directors.
+                  Thank you, <strong className="text-white">{authorName}</strong>. Your email app should now contain a draft addressed to{' '}
+                  <a className="text-[#D4AF37] underline" href="mailto:info@storylightstd.org">info@storylightstd.org</a>.
+                  Please send it to complete the inquiry.
                 </p>
 
                 <div className="p-4 bg-[#080D1A] rounded-lg border border-white/5 text-xs text-[#94A3B8] max-w-md mx-auto text-left space-y-2">
                   <div className="flex items-center gap-2 text-white font-medium">
                     <Clock className="w-4 h-4 text-[#D4AF37]" />
-                    <span>What Happens in the Next 24–48 Hours:</span>
+                    <span>What happens next:</span>
                   </div>
                   <ul className="space-y-1 pl-6 list-disc text-[11px]">
-                    <li>Initial forensic scan of your Amazon & Goodreads taxonomy</li>
-                    <li>Direct review by Hannah Cooper (CEO) and platform leads</li>
-                    <li>Tailored recommendations sent to <span className="text-white">{email}</span></li>
+                    <li>Check that your email draft opened correctly.</li>
+                    <li>Send the message to <span className="text-white">info@storylightstd.org</span>.</li>
+                    <li>The team can reply to <span className="text-white">{email}</span> after receiving it.</li>
                   </ul>
                 </div>
 
@@ -290,10 +302,10 @@ export const Contact: React.FC<ContactProps> = ({
                 <div>
                   <span className="text-[#94A3B8] block">Direct Executive Email:</span>
                   <a
-                    href="mailto:info.hannahcooper@gmail.com"
+                    href="mailto:info@storylightstd.org"
                     className="text-white hover:text-[#D4AF37] font-medium transition-colors"
                   >
-                    info.hannahcooper@gmail.com
+                    info@storylightstd.org
                   </a>
                 </div>
               </div>

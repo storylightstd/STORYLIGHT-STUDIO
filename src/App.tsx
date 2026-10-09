@@ -42,7 +42,7 @@ export default function App() {
 
   const handleNavigate = (page: PageId) => {
     setCurrentPage(page);
-    window.history.replaceState(null, '', page === 'home' ? window.location.pathname : `#${page}`);
+    window.history.pushState(null, '', page === 'home' ? window.location.pathname : `#${page}`);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 

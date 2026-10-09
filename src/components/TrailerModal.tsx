@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { PortfolioItem } from '../types';
-import { X, Play, Pause, Volume2, VolumeX, Maximize2, Sparkles, Film, Music, CheckCircle2 } from 'lucide-react';
+import { X, Play, Pause, Volume2, VolumeX, Sparkles, Film, Music, CheckCircle2 } from 'lucide-react';
 
 interface TrailerModalProps {
   item: PortfolioItem | null;
@@ -9,19 +9,44 @@ interface TrailerModalProps {
 }
 
 export const TrailerModal: React.FC<TrailerModalProps> = ({ item, onClose, onRequestQuote }) => {
-  const [isPlaying, setIsPlaying] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
-  const [progress, setProgress] = useState(25);
+  const [progress, setProgress] = useState(0);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
 
   useEffect(() => {
-    let timer: NodeJS.Timeout;
-    if (isPlaying && item) {
-      timer = setInterval(() => {
-        setProgress((prev) => (prev >= 100 ? 0 : prev + 1));
-      }, 500);
+    setIsPlaying(false);
+    setIsMuted(false);
+    setProgress(0);
+    setCurrentTime(0);
+    setDuration(0);
+  }, [item]);
+
+  const togglePlayback = () => {
+    const video = videoRef.current;
+    if (!video) return;
+    if (video.paused) {
+      void video.play();
+    } else {
+      video.pause();
     }
-    return () => clearInterval(timer);
-  }, [isPlaying, item]);
+  };
+
+  const toggleMute = () => {
+    const video = videoRef.current;
+    if (!video) return;
+    video.muted = !video.muted;
+    setIsMuted(video.muted);
+  };
+
+  const formatTime = (seconds: number) => {
+    if (!Number.isFinite(seconds)) return '00:00';
+    const minutes = Math.floor(seconds / 60);
+    const remainder = Math.floor(seconds % 60);
+    return `${String(minutes).padStart(2, '0')}:${String(remainder).padStart(2, '0')}`;
+  };
 
   if (!item) return null;
 
@@ -49,12 +74,21 @@ export const TrailerModal: React.FC<TrailerModalProps> = ({ item, onClose, onReq
         <div className="relative bg-black w-full aspect-video flex items-center justify-center overflow-hidden group select-none">
           {item.videoUrl ? (
             <video
+              ref={videoRef}
               src={item.videoUrl}
               poster={item.image}
               controls
               playsInline
               className="w-full h-full object-contain bg-black"
               aria-label={`${item.title} trailer preview`}
+              onPlay={() => setIsPlaying(true)}
+              onPause={() => setIsPlaying(false)}
+              onLoadedMetadata={(event) => setDuration(event.currentTarget.duration)}
+              onTimeUpdate={(event) => {
+                const video = event.currentTarget;
+                setCurrentTime(video.currentTime);
+                setProgress(video.duration ? (video.currentTime / video.duration) * 100 : 0);
+              }}
             />
           ) : (
             <img
@@ -70,7 +104,7 @@ export const TrailerModal: React.FC<TrailerModalProps> = ({ item, onClose, onReq
 
           {/* Center Play/Pause Overlay indicator */}
           <button
-            onClick={() => setIsPlaying(!isPlaying)}
+            onClick={togglePlayback}
             className="absolute z-10 w-16 h-16 rounded-full bg-[#080D1A]/80 border border-[#D4AF37] flex items-center justify-center text-white hover:scale-110 hover:bg-[#D4AF37] hover:text-[#080D1A] transition-all cursor-pointer shadow-xl backdrop-blur-sm"
             aria-label={isPlaying ? 'Pause preview' : 'Play preview'}
           >
@@ -104,7 +138,10 @@ export const TrailerModal: React.FC<TrailerModalProps> = ({ item, onClose, onReq
               onClick={(e) => {
                 const rect = e.currentTarget.getBoundingClientRect();
                 const clickX = e.clientX - rect.left;
-                setProgress(Math.round((clickX / rect.width) * 100));
+                const video = videoRef.current;
+                if (video && Number.isFinite(video.duration)) {
+                  video.currentTime = (clickX / rect.width) * video.duration;
+                }
               }}
             >
               <div
@@ -116,19 +153,19 @@ export const TrailerModal: React.FC<TrailerModalProps> = ({ item, onClose, onReq
             <div className="flex items-center justify-between text-xs text-[#E2E8F0]">
               <div className="flex items-center gap-3">
                 <button
-                  onClick={() => setIsPlaying(!isPlaying)}
+                  onClick={togglePlayback}
                   className="hover:text-[#D4AF37] transition-colors cursor-pointer"
                 >
                   {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
                 </button>
                 <button
-                  onClick={() => setIsMuted(!isMuted)}
+                  onClick={toggleMute}
                   className="hover:text-[#D4AF37] transition-colors cursor-pointer"
                 >
                   {isMuted ? <VolumeX className="w-4 h-4 text-rose-400" /> : <Volume2 className="w-4 h-4" />}
                 </button>
                 <span className="font-mono text-[11px] text-[#CBD5E1]">
-                  00:{progress < 10 ? `0${progress}` : progress} / {item.duration?.split(' ')[0] || '01:14'}
+                  {formatTime(currentTime)} / {formatTime(duration)}
                 </span>
               </div>
               <div className="text-[11px] text-[#D4AF37] flex items-center gap-1 font-medium">

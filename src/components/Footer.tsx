@@ -37,10 +37,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <div className="flex items-center gap-2 text-xs text-[#CBD5E1]">
               <Mail className="w-3.5 h-3.5 text-[#D4AF37] shrink-0" />
               <a
-                href="mailto:info.hannahcooper@gmail.com"
+                href="mailto:info@storylightstd.org"
                 className="hover:text-white transition-colors underline-offset-4 hover:underline"
               >
-                info.hannahcooper@gmail.com
+                info@storylightstd.org
               </a>
             </div>
           </div>

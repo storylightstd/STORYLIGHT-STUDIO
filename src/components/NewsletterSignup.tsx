@@ -3,7 +3,7 @@ import { Mail, CheckCircle2, ArrowRight, Sparkles, ShieldCheck } from 'lucide-re
 
 export const NewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success'>('idle');
+  const [status, setStatus] = useState<'idle' | 'loading' | 'prepared'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -15,10 +15,10 @@ export const NewsletterSignup: React.FC = () => {
 
     setErrorMessage('');
     setStatus('loading');
-
-    setTimeout(() => {
-      setStatus('success');
-    }, 600);
+    const subject = 'Subscribe me to the Storylight author dispatch';
+    const body = `Please add ${email} to the Storylight author dispatch list. I understand that this email draft must be sent to complete the request.`;
+    window.location.href = `mailto:info@storylightstd.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setStatus('prepared');
   };
 
   return (
@@ -52,16 +52,16 @@ export const NewsletterSignup: React.FC = () => {
 
         {/* Right: Signup Form & States */}
         <div className="lg:col-span-5">
-          {status === 'success' ? (
+          {status === 'prepared' ? (
             <div className="bg-[#080E1B]/90 border border-[#D4AF37]/40 rounded-lg p-6 text-center space-y-3 animate-in fade-in duration-300">
               <div className="w-10 h-10 rounded-full bg-[#D4AF37]/15 border border-[#D4AF37] flex items-center justify-center text-[#D4AF37] mx-auto">
                 <CheckCircle2 className="w-5 h-5" />
               </div>
               <h4 className="text-lg font-editorial font-bold text-white">
-                Welcome to Storylight Dispatches
+                Your subscription email is ready
               </h4>
               <p className="text-xs text-[#CBD5E1] leading-relaxed">
-                We’ve sent your welcome dispatch and our complimentary <strong className="text-white">Author Visibility Checklist</strong> to <span className="text-[#D4AF37]">{email}</span>.
+                Your email app should now contain a draft addressed to <span className="text-[#D4AF37]">info@storylightstd.org</span>. Send it to request subscription; no subscription is completed until the team receives and confirms it.
               </p>
               <button
                 type="button"
