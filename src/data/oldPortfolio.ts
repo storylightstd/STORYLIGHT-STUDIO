@@ -8,7 +8,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Kathryn Stockett",
     "genre": "Literary Fiction",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9781954118812-L.jpg",
+    "coverUrl": "/assets/covers/the-calamity-club-1.jpg",
     "amazonUrl": "https://a.co/d/06mM6v3Q",
     "goodreadsUrl": "https://www.goodreads.com/search?q=The+Calamity+Club+Kathryn+Stockett"
   },
@@ -18,7 +18,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Allen Levi",
     "genre": "Fiction",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/olid/OL60925324M-L.jpg",
+    "coverUrl": "/assets/covers/theo-of-golden-2.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=Theo+of+Golden+Allen+Levi",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Theo+of+Golden+Allen+Levi"
   },
@@ -28,7 +28,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Marie Bostwick",
     "genre": "Historical",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9781400344741-L.jpg",
+    "coverUrl": "/assets/covers/the-book-club-for-troublesome-women-3.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=The+Book+Club+for+Troublesome+Women+Marie+Bostwick",
     "goodreadsUrl": "https://www.goodreads.com/search?q=The+Book+Club+for+Troublesome+Women+Marie+Bostwick"
   },
@@ -38,7 +38,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Alex Aster",
     "genre": "Fantasy",
     "service": "SOCIAL MEDIA & BOOKTOK",
-    "coverUrl": "https://covers.openlibrary.org/b/olid/OL62486062M-L.jpg",
+    "coverUrl": "/assets/covers/starside-4.jpg",
     "amazonUrl": "https://a.co/d/04mcSH3m",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Starside+Alex+Aster"
   },
@@ -48,7 +48,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Ann Patchett",
     "genre": "Literary Fiction",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/olid/OL61803007M-L.jpg",
+    "coverUrl": "/assets/covers/whistler-5.jpg",
     "amazonUrl": "https://a.co/d/0baPanLE",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Whistler+Ann+Patchett"
   },
@@ -58,7 +58,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Daniel Silva",
     "genre": "Mystery",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/olid/OL62307198M-L.jpg",
+    "coverUrl": "/assets/covers/ransom-6.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=Ransom+Daniel+Silva",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Ransom+Daniel+Silva"
   },
@@ -68,7 +68,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Homer",
     "genre": "Poetry",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9780140449136-L.jpg",
+    "coverUrl": "/assets/covers/the-odyssey-7.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=The+Odyssey+Homer",
     "goodreadsUrl": "https://www.goodreads.com/search?q=The+Odyssey+Homer"
   },
@@ -78,7 +78,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Alan Watts",
     "genre": "Philosophy",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9780679762393-L.jpg",
+    "coverUrl": "/assets/covers/the-book-8.svg",
     "amazonUrl": "https://www.amazon.com/s?k=The+Book+Alan+Watts",
     "goodreadsUrl": "https://www.goodreads.com/search?q=The+Book+Alan+Watts"
   },
@@ -88,7 +88,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Elin Hilderbrand",
     "genre": "Fiction",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9780316542739-L.jpg",
+    "coverUrl": "/assets/covers/the-five-star-weekend-9.svg",
     "amazonUrl": "https://www.amazon.com/s?k=The+Five-Star+Weekend+Elin+Hilderbrand",
     "goodreadsUrl": "https://www.goodreads.com/search?q=The+Five-Star+Weekend+Elin+Hilderbrand"
   },
@@ -98,7 +98,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Ann Napolitano",
     "genre": "Literary Fiction",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9780593237359-L.jpg",
+    "coverUrl": "/assets/covers/hello-beautiful-10.svg",
     "amazonUrl": "https://www.amazon.com/s?k=Hello+Beautiful+Ann+Napolitano",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Hello+Beautiful+Ann+Napolitano"
   },
@@ -108,7 +108,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Andy Weir",
     "genre": "Sci-Fi",
     "service": "SOCIAL MEDIA & BOOKTOK",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9780593135204-L.jpg",
+    "coverUrl": "/assets/covers/project-hail-mary-11.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=Project+Hail+Mary+Andy+Weir",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Project+Hail+Mary+Andy+Weir"
   },
@@ -118,7 +118,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Sarah M. Eden",
     "genre": "Historical",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9781606418635-L.jpg",
+    "coverUrl": "/assets/covers/seeking-persephone-12.svg",
     "amazonUrl": "https://www.amazon.com/s?k=Seeking+Persephone+Sarah+M.+Eden",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Seeking+Persephone+Sarah+M.+Eden"
   },
@@ -128,7 +128,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Sally Hepworth",
     "genre": "Mystery",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/olid/OL60747946M-L.jpg",
+    "coverUrl": "/assets/covers/mad-mabel-13.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=Mad+Mabel+Sally+Hepworth",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Mad+Mabel+Sally+Hepworth"
   },
@@ -138,7 +138,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Matt Dinniman",
     "genre": "Fantasy",
     "service": "SOCIAL MEDIA & BOOKTOK",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9781736915403-L.jpg",
+    "coverUrl": "/assets/covers/dungeon-crawler-carl-14.svg",
     "amazonUrl": "https://www.amazon.com/s?k=Dungeon+Crawler+Carl+Matt+Dinniman",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Dungeon+Crawler+Carl+Matt+Dinniman"
   },
@@ -148,7 +148,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Elle Kennedy",
     "genre": "Romance",
     "service": "SOCIAL MEDIA & BOOKTOK",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9781511326117-L.jpg",
+    "coverUrl": "/assets/covers/the-deal-15.svg",
     "amazonUrl": "https://www.amazon.com/s?k=The+Deal+Elle+Kennedy",
     "goodreadsUrl": "https://www.goodreads.com/search?q=The+Deal+Elle+Kennedy"
   },
@@ -158,7 +158,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Elizabeth Strout",
     "genre": "Literary",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/olid/OL61021515M-L.jpg",
+    "coverUrl": "/assets/covers/the-things-we-never-say-16.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=The+Things+We+Never+Say+Elizabeth+Strout",
     "goodreadsUrl": "https://www.goodreads.com/search?q=The+Things+We+Never+Say+Elizabeth+Strout"
   },
@@ -168,7 +168,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Virginia Evans",
     "genre": "Literary Fiction",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/olid/OL62543724M-L.jpg",
+    "coverUrl": "/assets/covers/the-correspondent-17.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=The+Correspondent+Virginia+Evans",
     "goodreadsUrl": "https://www.goodreads.com/search?q=The+Correspondent+Virginia+Evans"
   },
@@ -178,7 +178,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Brenda Davies",
     "genre": "Historical",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9781786817334-L.jpg",
+    "coverUrl": "/assets/covers/the-girl-behind-the-gates-18.svg",
     "amazonUrl": "https://www.amazon.com/s?k=The+Girl+Behind+the+Gates+Brenda+Davies",
     "goodreadsUrl": "https://www.goodreads.com/search?q=The+Girl+Behind+the+Gates+Brenda+Davies"
   },
@@ -188,7 +188,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Freida McFadden",
     "genre": "Psychological",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9781955552769-L.jpg",
+    "coverUrl": "/assets/covers/the-divorce-19.svg",
     "amazonUrl": "https://www.amazon.com/s?k=The+Divorce+Freida+McFadden",
     "goodreadsUrl": "https://www.goodreads.com/search?q=The+Divorce+Freida+McFadden"
   },
@@ -198,7 +198,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Helen Scheuerer",
     "genre": "Fantasy",
     "service": "SOCIAL MEDIA & BOOKTOK",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9780645533306-L.jpg",
+    "coverUrl": "/assets/covers/iron-embers-20.svg",
     "amazonUrl": "https://www.amazon.com/s?k=Iron+%26+Embers+Helen+Scheuerer",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Iron+%26+Embers+Helen+Scheuerer"
   },
@@ -208,7 +208,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Melissa K. Roehrich",
     "genre": "Fantasy",
     "service": "SOCIAL MEDIA & BOOKTOK",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9781961358003-L.jpg",
+    "coverUrl": "/assets/covers/dawn-of-chaos-and-fury-21.svg",
     "amazonUrl": "https://www.amazon.com/s?k=Dawn+of+Chaos+and+Fury+Melissa+K.+Roehrich",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Dawn+of+Chaos+and+Fury+Melissa+K.+Roehrich"
   },
@@ -218,7 +218,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Sable Sorensen",
     "genre": "Fantasy",
     "service": "SOCIAL MEDIA & BOOKTOK",
-    "coverUrl": "https://covers.openlibrary.org/b/olid/OL61534326M-L.jpg",
+    "coverUrl": "/assets/covers/fury-bound-22.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=Fury+Bound+Sable+Sorensen",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Fury+Bound+Sable+Sorensen"
   },
@@ -228,7 +228,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Emily Giffin",
     "genre": "Fiction",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9780312348663-L.jpg",
+    "coverUrl": "/assets/covers/love-you-more-23.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=Love+You+More+Emily+Giffin",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Love+You+More+Emily+Giffin"
   },
@@ -238,7 +238,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Stephen Graham Jones",
     "genre": "Horror",
     "service": "SOCIAL MEDIA & BOOKTOK",
-    "coverUrl": "https://covers.openlibrary.org/b/olid/OL60826642M-L.jpg",
+    "coverUrl": "/assets/covers/the-buffalo-hunter-hunter-24.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=The+Buffalo+Hunter+Hunter+Stephen+Graham+Jones",
     "goodreadsUrl": "https://www.goodreads.com/search?q=The+Buffalo+Hunter+Hunter+Stephen+Graham+Jones"
   },
@@ -248,7 +248,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Robert Jackson Bennett",
     "genre": "Fantasy",
     "service": "SOCIAL MEDIA & BOOKTOK",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9780593598368-L.jpg",
+    "coverUrl": "/assets/covers/the-tainted-cup-25.svg",
     "amazonUrl": "https://www.amazon.com/s?k=The+Tainted+Cup+Robert+Jackson+Bennett",
     "goodreadsUrl": "https://www.goodreads.com/search?q=The+Tainted+Cup+Robert+Jackson+Bennett"
   },
@@ -258,7 +258,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "John Grisham",
     "genre": "Thriller",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9780345807540-L.jpg",
+    "coverUrl": "/assets/covers/the-whistler-26.svg",
     "amazonUrl": "https://www.amazon.com/s?k=The+Whistler+John+Grisham",
     "goodreadsUrl": "https://www.goodreads.com/search?q=The+Whistler+John+Grisham"
   },
@@ -268,7 +268,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Tananarive Due",
     "genre": "Horror",
     "service": "SOCIAL MEDIA & BOOKTOK",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9781982188344-L.jpg",
+    "coverUrl": "/assets/covers/the-reformatory-27.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=The+Reformatory+Tananarive+Due",
     "goodreadsUrl": "https://www.goodreads.com/search?q=The+Reformatory+Tananarive+Due"
   },
@@ -278,7 +278,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Tara Westover",
     "genre": "Non-Fiction",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9780399590504-L.jpg",
+    "coverUrl": "/assets/covers/educated-28.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=Educated+Tara+Westover",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Educated+Tara+Westover"
   },
@@ -288,7 +288,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Omar El Akkad",
     "genre": "Non-Fiction",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/olid/OL57439770M-L.jpg",
+    "coverUrl": "/assets/covers/one-day-everyone-will-have-always-been-against-this-29.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=One+Day%2C+Everyone+Will+Have+Always+Been+Against+This+Omar+El+Akkad",
     "goodreadsUrl": "https://www.goodreads.com/search?q=One+Day%2C+Everyone+Will+Have+Always+Been+Against+This+Omar+El+Akkad"
   },
@@ -298,7 +298,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Jennette McCurdy",
     "genre": "Non-Fiction",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9781982185824-L.jpg",
+    "coverUrl": "/assets/covers/i-m-glad-my-mom-died-30.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=I%27m+Glad+My+Mom+Died+Jennette+McCurdy",
     "goodreadsUrl": "https://www.goodreads.com/search?q=I%27m+Glad+My+Mom+Died+Jennette+McCurdy"
   },
@@ -308,7 +308,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Jen Hatmaker",
     "genre": "Non-Fiction",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/olid/OL60623461M-L.jpg",
+    "coverUrl": "/assets/covers/awake-31.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=Awake+Jen+Hatmaker",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Awake+Jen+Hatmaker"
   },
@@ -318,7 +318,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Jeannette Walls",
     "genre": "Non-Fiction",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9780743247542-L.jpg",
+    "coverUrl": "/assets/covers/the-glass-castle-32.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=The+Glass+Castle+Jeannette+Walls",
     "goodreadsUrl": "https://www.goodreads.com/search?q=The+Glass+Castle+Jeannette+Walls"
   },
@@ -328,7 +328,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Elizabeth Smart",
     "genre": "Non-Fiction",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9781250040060-L.jpg",
+    "coverUrl": "/assets/covers/my-story-33.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=My+Story+Elizabeth+Smart",
     "goodreadsUrl": "https://www.goodreads.com/search?q=My+Story+Elizabeth+Smart"
   },
@@ -338,7 +338,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Michelle Knight",
     "genre": "Non-Fiction",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9781602862586-L.jpg",
+    "coverUrl": "/assets/covers/finding-me-34.svg",
     "amazonUrl": "https://www.amazon.com/s?k=Finding+Me+Michelle+Knight",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Finding+Me+Michelle+Knight"
   },
@@ -348,7 +348,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Lara Love Hardin",
     "genre": "Non-Fiction",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9781668002346-L.jpg",
+    "coverUrl": "/assets/covers/the-many-lives-of-mama-love-35.svg",
     "amazonUrl": "https://www.amazon.com/s?k=The+Many+Lives+of+Mama+Love+Lara+Love+Hardin",
     "goodreadsUrl": "https://www.goodreads.com/search?q=The+Many+Lives+of+Mama+Love+Lara+Love+Hardin"
   },
@@ -358,7 +358,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Trevor Noah",
     "genre": "Non-Fiction",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9780399588174-L.jpg",
+    "coverUrl": "/assets/covers/born-a-crime-36.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=Born+a+Crime+Trevor+Noah",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Born+a+Crime+Trevor+Noah"
   },
@@ -368,7 +368,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Gregg Olsen",
     "genre": "Non-Fiction",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9781542005289-L.jpg",
+    "coverUrl": "/assets/covers/if-you-tell-37.svg",
     "amazonUrl": "https://www.amazon.com/s?k=If+You+Tell+Gregg+Olsen",
     "goodreadsUrl": "https://www.goodreads.com/search?q=If+You+Tell+Gregg+Olsen"
   },
@@ -378,7 +378,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Lucinda Berry",
     "genre": "Thriller",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9781503903364-L.jpg",
+    "coverUrl": "/assets/covers/the-perfect-child-38.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=The+Perfect+Child+Lucinda+Berry",
     "goodreadsUrl": "https://www.goodreads.com/search?q=The+Perfect+Child+Lucinda+Berry"
   },
@@ -388,7 +388,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Mary Burton",
     "genre": "Mystery",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9781542026567-L.jpg",
+    "coverUrl": "/assets/covers/what-she-saw-39.svg",
     "amazonUrl": "https://www.amazon.com/s?k=What+She+Saw+Mary+Burton",
     "goodreadsUrl": "https://www.goodreads.com/search?q=What+She+Saw+Mary+Burton"
   },
@@ -398,7 +398,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Cheryl Strayed",
     "genre": "Non-Fiction",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9780307592736-L.jpg",
+    "coverUrl": "/assets/covers/wild-40.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=Wild+Cheryl+Strayed",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Wild+Cheryl+Strayed"
   },
@@ -408,7 +408,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Barbara Mujica",
     "genre": "AMAZON & GOODREADS STRATEGY",
     "service": "FEATURED",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9780452284081-L.jpg",
+    "coverUrl": "/assets/covers/frida-41.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=Frida+Barbara+Mujica",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Frida+Barbara+Mujica"
   },
@@ -418,7 +418,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Kristin Hannah",
     "genre": "Literary Fiction",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9780312577230-L.jpg",
+    "coverUrl": "/assets/covers/the-great-alone-42.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=The+Great+Alone+Kristin+Hannah",
     "goodreadsUrl": "https://www.goodreads.com/search?q=The+Great+Alone+Kristin+Hannah"
   },
@@ -428,7 +428,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Matt Haig",
     "genre": "Literary Fiction",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9780525559474-L.jpg",
+    "coverUrl": "/assets/covers/the-midnight-library-43.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=The+Midnight+Library+Matt+Haig",
     "goodreadsUrl": "https://www.goodreads.com/search?q=The+Midnight+Library+Matt+Haig"
   },
@@ -438,7 +438,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Delia Owens",
     "genre": "Literary Fiction",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9780735224292-L.jpg",
+    "coverUrl": "/assets/covers/where-the-crawdads-sing-44.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=Where+the+Crawdads+Sing+Delia+Owens",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Where+the+Crawdads+Sing+Delia+Owens"
   },
@@ -448,7 +448,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Fredrik Backman",
     "genre": "Literary Fiction",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9781982121334-L.jpg",
+    "coverUrl": "/assets/covers/anxious-people-45.svg",
     "amazonUrl": "https://www.amazon.com/s?k=Anxious+People+Fredrik+Backman",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Anxious+People+Fredrik+Backman"
   },
@@ -458,7 +458,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Min Jin Lee",
     "genre": "Historical",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9781455563937-L.jpg",
+    "coverUrl": "/assets/covers/pachinko-46.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=Pachinko+Min+Jin+Lee",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Pachinko+Min+Jin+Lee"
   },
@@ -468,7 +468,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Madeline Miller",
     "genre": "Historical",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9780062060624-L.jpg",
+    "coverUrl": "/assets/covers/the-song-of-achilles-47.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=The+Song+of+Achilles+Madeline+Miller",
     "goodreadsUrl": "https://www.goodreads.com/search?q=The+Song+of+Achilles+Madeline+Miller"
   },
@@ -478,7 +478,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Anthony Doerr",
     "genre": "Historical",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9781476746586-L.jpg",
+    "coverUrl": "/assets/covers/all-the-light-we-cannot-see-48.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=All+the+Light+We+Cannot+See+Anthony+Doerr",
     "goodreadsUrl": "https://www.goodreads.com/search?q=All+the+Light+We+Cannot+See+Anthony+Doerr"
   },
@@ -488,7 +488,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Sarah J. Maas",
     "genre": "Fantasy",
     "service": "SOCIAL MEDIA & BOOKTOK",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9781619634466-L.jpg",
+    "coverUrl": "/assets/covers/a-court-of-thorns-and-roses-49.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=A+Court+of+Thorns+and+Roses+Sarah+J.+Maas",
     "goodreadsUrl": "https://www.goodreads.com/search?q=A+Court+of+Thorns+and+Roses+Sarah+J.+Maas"
   },
@@ -498,7 +498,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Patrick Rothfuss",
     "genre": "Fantasy",
     "service": "SOCIAL MEDIA & BOOKTOK",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9780756404741-L.jpg",
+    "coverUrl": "/assets/covers/the-name-of-the-wind-50.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=The+Name+of+the+Wind+Patrick+Rothfuss",
     "goodreadsUrl": "https://www.goodreads.com/search?q=The+Name+of+the+Wind+Patrick+Rothfuss"
   },
@@ -508,7 +508,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Leigh Bardugo",
     "genre": "Fantasy",
     "service": "SOCIAL MEDIA & BOOKTOK",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9781627792127-L.jpg",
+    "coverUrl": "/assets/covers/six-of-crows-51.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=Six+of+Crows+Leigh+Bardugo",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Six+of+Crows+Leigh+Bardugo"
   },
@@ -518,7 +518,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Rebecca Yarros",
     "genre": "Fantasy",
     "service": "SOCIAL MEDIA & BOOKTOK",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9781649374042-L.jpg",
+    "coverUrl": "/assets/covers/fourth-wing-52.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=Fourth+Wing+Rebecca+Yarros",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Fourth+Wing+Rebecca+Yarros"
   },
@@ -528,7 +528,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Pierce Brown",
     "genre": "Sci-Fi",
     "service": "SOCIAL MEDIA & BOOKTOK",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9780345539786-L.jpg",
+    "coverUrl": "/assets/covers/red-rising-53.svg",
     "amazonUrl": "https://www.amazon.com/s?k=Red+Rising+Pierce+Brown",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Red+Rising+Pierce+Brown"
   },
@@ -538,7 +538,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Andy Weir",
     "genre": "Sci-Fi",
     "service": "SOCIAL MEDIA & BOOKTOK",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9780593135204-L.jpg",
+    "coverUrl": "/assets/covers/project-hail-mary-54.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=Project+Hail+Mary+Andy+Weir",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Project+Hail+Mary+Andy+Weir"
   },
@@ -548,7 +548,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Frank Herbert",
     "genre": "Sci-Fi",
     "service": "SOCIAL MEDIA & BOOKTOK",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9780441013593-L.jpg",
+    "coverUrl": "/assets/covers/dune-55.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=Dune+Frank+Herbert",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Dune+Frank+Herbert"
   },
@@ -558,7 +558,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Adrian Tchaikovsky",
     "genre": "Sci-Fi",
     "service": "SOCIAL MEDIA & BOOKTOK",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9781447273288-L.jpg",
+    "coverUrl": "/assets/covers/children-of-time-56.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=Children+of+Time+Adrian+Tchaikovsky",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Children+of+Time+Adrian+Tchaikovsky"
   },
@@ -568,7 +568,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Gillian Flynn",
     "genre": "Thriller",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9780307588364-L.jpg",
+    "coverUrl": "/assets/covers/gone-girl-57.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=Gone+Girl+Gillian+Flynn",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Gone+Girl+Gillian+Flynn"
   },
@@ -578,7 +578,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Alex Michaelides",
     "genre": "Thriller",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9781250301697-L.jpg",
+    "coverUrl": "/assets/covers/the-silent-patient-58.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=The+Silent+Patient+Alex+Michaelides",
     "goodreadsUrl": "https://www.goodreads.com/search?q=The+Silent+Patient+Alex+Michaelides"
   },
@@ -588,7 +588,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Colleen Hoover",
     "genre": "Thriller",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9781538724736-L.jpg",
+    "coverUrl": "/assets/covers/verity-59.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=Verity+Colleen+Hoover",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Verity+Colleen+Hoover"
   },
@@ -598,7 +598,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Colleen Hoover",
     "genre": "Romance",
     "service": "SOCIAL MEDIA & BOOKTOK",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9781501110368-L.jpg",
+    "coverUrl": "/assets/covers/it-ends-with-us-60.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=It+Ends+with+Us+Colleen+Hoover",
     "goodreadsUrl": "https://www.goodreads.com/search?q=It+Ends+with+Us+Colleen+Hoover"
   },
@@ -608,7 +608,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Emily Henry",
     "genre": "Romance",
     "service": "SOCIAL MEDIA & BOOKTOK",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9781984806734-L.jpg",
+    "coverUrl": "/assets/covers/beach-read-61.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=Beach+Read+Emily+Henry",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Beach+Read+Emily+Henry"
   },
@@ -618,7 +618,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Emily Henry",
     "genre": "Romance",
     "service": "SOCIAL MEDIA & BOOKTOK",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9780593334836-L.jpg",
+    "coverUrl": "/assets/covers/book-lovers-62.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=Book+Lovers+Emily+Henry",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Book+Lovers+Emily+Henry"
   },
@@ -628,7 +628,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "James Clear",
     "genre": "Non-Fiction",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9780735211292-L.jpg",
+    "coverUrl": "/assets/covers/atomic-habits-63.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=Atomic+Habits+James+Clear",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Atomic+Habits+James+Clear"
   },
@@ -638,7 +638,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Tara Westover",
     "genre": "Non-Fiction",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9780399590504-L.jpg",
+    "coverUrl": "/assets/covers/educated-64.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=Educated+Tara+Westover",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Educated+Tara+Westover"
   },
@@ -648,7 +648,7 @@ export const LEGACY_BOOKS: LegacyBook[] = [
     "author": "Yuval Noah Harari",
     "genre": "Non-Fiction",
     "service": "AMAZON & GOODREADS STRATEGY",
-    "coverUrl": "https://covers.openlibrary.org/b/isbn/9780062316097-L.jpg",
+    "coverUrl": "/assets/covers/sapiens-65.jpg",
     "amazonUrl": "https://www.amazon.com/s?k=Sapiens+Yuval+Noah+Harari",
     "goodreadsUrl": "https://www.goodreads.com/search?q=Sapiens+Yuval+Noah+Harari"
   }
