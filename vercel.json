@@ -4,11 +4,9 @@
   "framework": "vite",
   "functions": {
     "api/contact.ts": {
-      "runtime": "nodejs22.x",
       "maxDuration": 15
     },
     "api/review.ts": {
-      "runtime": "nodejs22.x",
       "maxDuration": 15
     }
   }
