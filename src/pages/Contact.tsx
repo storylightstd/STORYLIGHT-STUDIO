@@ -26,8 +26,10 @@ export const Contact: React.FC<ContactProps> = ({
   const [serviceFocus, setServiceFocus] = useState('');
   const [bookLink, setBookLink] = useState('');
   const [message, setMessage] = useState('');
+  const [manuscript, setManuscript] = useState<File | null>(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [submissionError, setSubmissionError] = useState('');
 
   useEffect(() => {
     if (initialService) {
@@ -48,27 +50,34 @@ export const Contact: React.FC<ContactProps> = ({
     }
   }, [diagnosticPrefill]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!authorName || !email) return;
-
-    const subject = `Storylight inquiry from ${authorName}${bookTitle ? ` — ${bookTitle}` : ''}`;
-    const body = [
-      `Author: ${authorName}`,
-      `Email: ${email}`,
-      `Book / series: ${bookTitle || 'Not provided'}`,
-      `Genre: ${genre || 'Not provided'}`,
-      `Release stage: ${stage}`,
-      `Service focus: ${serviceFocus || 'Not provided'}`,
-      `Book link or ASIN: ${bookLink || 'Not provided'}`,
-      '',
-      message || 'No additional message provided.',
-    ].join('\n');
-
+    setSubmissionError('');
     setSubmitting(true);
-    window.location.href = `mailto:info@storylightstd.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    setSubmitting(false);
-    setIsSubmitted(true);
+    try {
+      const formData = new FormData();
+      formData.append('authorName', authorName);
+      formData.append('email', email);
+      formData.append('bookTitle', bookTitle);
+      formData.append('genre', genre);
+      formData.append('stage', stage);
+      formData.append('serviceFocus', serviceFocus);
+      formData.append('bookLink', bookLink);
+      formData.append('message', message);
+      if (manuscript) formData.append('manuscript', manuscript, manuscript.name);
+
+      const response = await fetch('/api/contact', { method: 'POST', body: formData });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || !result.ok) {
+        throw new Error(result.error || 'We could not deliver your submission. Please try again.');
+      }
+      setIsSubmitted(true);
+    } catch (error) {
+      setSubmissionError(error instanceof Error ? error.message : 'We could not deliver your submission. Please try again.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -97,12 +106,10 @@ export const Contact: React.FC<ContactProps> = ({
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
                 <h3 className="text-2xl font-editorial font-bold text-white">
-                  Your email draft is ready
+                  Diagnostic inquiry received
                 </h3>
                 <p className="text-sm text-[#CBD5E1] max-w-md mx-auto leading-relaxed">
-                  Thank you, <strong className="text-white">{authorName}</strong>. Your email app should now contain a draft addressed to{' '}
-                  <a className="text-[#D4AF37] underline" href="mailto:info@storylightstd.org">info@storylightstd.org</a>.
-                  Please send it to complete the inquiry.
+                  Thank you, <strong className="text-white">{authorName}</strong>. Your inquiry was securely delivered to the Storylight team.
                 </p>
 
                 <div className="p-4 bg-[#080D1A] rounded-lg border border-white/5 text-xs text-[#94A3B8] max-w-md mx-auto text-left space-y-2">
@@ -111,9 +118,9 @@ export const Contact: React.FC<ContactProps> = ({
                     <span>What happens next:</span>
                   </div>
                   <ul className="space-y-1 pl-6 list-disc text-[11px]">
-                    <li>Check that your email draft opened correctly.</li>
-                    <li>Send the message to <span className="text-white">info@storylightstd.org</span>.</li>
-                    <li>The team can reply to <span className="text-white">{email}</span> after receiving it.</li>
+                    <li>Your submission and any attached manuscript were delivered to the team.</li>
+                    <li>The team can reply to <span className="text-white">{email}</span> after review.</li>
+                    <li>Please do not resend unless the team asks for more information.</li>
                   </ul>
                 </div>
 
@@ -124,6 +131,7 @@ export const Contact: React.FC<ContactProps> = ({
                       setAuthorName('');
                       setEmail('');
                       setBookTitle('');
+                      setManuscript(null);
                       setMessage('');
                     }}
                     className="px-6 py-2.5 text-xs text-[#94A3B8] hover:text-white border border-white/10 rounded-sm cursor-pointer"
@@ -133,7 +141,7 @@ export const Contact: React.FC<ContactProps> = ({
                 </div>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form onSubmit={handleSubmit} encType="multipart/form-data" className="space-y-5">
                 <div className="border-b border-white/10 pb-4">
                   <h3 className="text-xl font-editorial font-bold text-white">
                     Book & Author Profile
@@ -263,6 +271,40 @@ export const Contact: React.FC<ContactProps> = ({
                   />
                 </div>
 
+                <div>
+                  <label htmlFor="manuscript-upload" className="block text-xs font-semibold uppercase tracking-wider text-[#CBD5E1] mb-1.5">
+                    Manuscript file <span className="text-[#94A3B8] font-normal">(Optional)</span>
+                  </label>
+                  <input
+                    id="manuscript-upload"
+                    name="manuscript"
+                    type="file"
+                    accept=".pdf,.docx,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                    onChange={(e) => {
+                      const file = e.target.files?.[0] || null;
+                      if (file && file.size > 10 * 1024 * 1024) {
+                        e.currentTarget.value = '';
+                        setManuscript(null);
+                        setSubmissionError('Please choose a PDF or DOCX manuscript under 10 MB.');
+                        return;
+                      }
+                      setManuscript(file);
+                      setSubmissionError('');
+                    }}
+                    className="w-full text-xs text-[#CBD5E1] file:mr-3 file:rounded file:border-0 file:bg-[#D4AF37] file:px-3 file:py-2 file:text-xs file:font-semibold file:text-[#080D1A] hover:file:bg-[#E6CA85]"
+                    aria-describedby="manuscript-help"
+                  />
+                  <p id="manuscript-help" className="mt-1.5 text-[11px] text-[#94A3B8]">
+                    PDF or DOCX only, maximum 10 MB. Files are sent securely with your inquiry.
+                  </p>
+                </div>
+
+                {submissionError && (
+                  <p role="alert" className="rounded border border-rose-400/30 bg-rose-950/20 px-3 py-2 text-xs text-rose-300">
+                    {submissionError}
+                  </p>
+                )}
+
                 <div className="pt-2">
                   <button
                     type="submit"
@@ -274,7 +316,7 @@ export const Contact: React.FC<ContactProps> = ({
                     ) : (
                       <>
                         <Send className="w-4 h-4" />
-                        <span>Submit Book for Diagnostic Review</span>
+                      <span>Submit Secure Diagnostic Inquiry</span>
                       </>
                     )}
                   </button>
@@ -282,7 +324,7 @@ export const Contact: React.FC<ContactProps> = ({
 
                 <div className="flex items-center justify-center gap-2 text-[11px] text-[#94A3B8] pt-1">
                   <ShieldCheck className="w-3.5 h-3.5 text-[#D4AF37]" />
-                  <span>Strict Confidentiality · Your manuscript and ideas are 100% protected</span>
+                  <span>Secure upload · PDF/DOCX only · 10 MB maximum</span>
                 </div>
               </form>
             )}
