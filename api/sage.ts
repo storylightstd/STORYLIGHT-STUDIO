@@ -44,7 +44,7 @@ function cleanMessages(value: unknown): ClientMessage[] {
 }
 
 function toGeminiContents(messages: ClientMessage[]) {
-  return messages.map(message => ({
+  return messages.filter((message, index) => !(index === 0 && message.role === 'sage')).map(message => ({
     role: message.role === 'sage' ? 'model' : 'user',
     parts: [{ text: message.text }],
   }));

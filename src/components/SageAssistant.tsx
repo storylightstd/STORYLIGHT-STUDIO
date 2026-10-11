@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { Bot, ChevronDown, Loader2, Send, ShieldCheck, Sparkles, X } from 'lucide-react';
+import { Bot, Loader2, Send, ShieldCheck, Sparkles, X } from 'lucide-react';
 
 interface Message { role: 'sage' | 'user'; text: string; }
 
