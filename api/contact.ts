@@ -27,7 +27,7 @@ const ALLOWED_MIME_TYPES = new Set([
 ]);
 const recentSubmissions = new Map<string, number>();
 const RATE_WINDOW_MS = 15 * 60 * 1000;
-const RATE_LIMIT_INTERVAL_MS = RATE_WINDOW_MS / 5;
+const RATE_LIMIT_INTERVAL_MS = 30 * 1000;
 
 type ParsedUpload = {
   fields: Record<string, string>;
@@ -142,10 +142,15 @@ export default async function handler(req: IncomingMessage, res: ServerResponse)
     return json(res, 403, { ok: false, error: 'Unable to process this submission.' });
   }
 
+  if (!process.env.RESEND_API_KEY || !process.env.RESEND_FROM_EMAIL) {
+    return json(res, 503, { ok: false, error: 'Secure submission is temporarily unavailable. Please try again later.' });
+  }
+
   const clientKey = String(req.headers['x-forwarded-for'] || req.socket.remoteAddress || 'unknown').split(',')[0].trim();
   const now = Date.now();
   const previous = recentSubmissions.get(clientKey) || 0;
   if (now - previous < RATE_LIMIT_INTERVAL_MS) {
+    res.setHeader('Retry-After', String(Math.ceil((RATE_LIMIT_INTERVAL_MS - (now - previous)) / 1000)));
     return json(res, 429, { ok: false, error: 'Please wait a moment before sending another submission.' });
   }
   recentSubmissions.set(clientKey, now);
@@ -157,10 +162,6 @@ export default async function handler(req: IncomingMessage, res: ServerResponse)
   const contentLength = rawLength ? Number(rawLength) : 0;
   if (contentLength > 12 * 1024 * 1024) {
     return json(res, 413, { ok: false, error: 'The upload is too large. Please keep the manuscript under 10 MB.' });
-  }
-
-  if (!process.env.RESEND_API_KEY || !process.env.RESEND_FROM_EMAIL) {
-    return json(res, 503, { ok: false, error: 'Secure submission is temporarily unavailable. Please try again later.' });
   }
 
   try {
