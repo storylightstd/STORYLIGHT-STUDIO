@@ -1,7 +1,7 @@
 import type { IncomingMessage, ServerResponse } from 'node:http';
 
 const SITE_ORIGIN = process.env.SITE_ORIGIN || 'https://storylight-studio.vercel.app';
-const MODEL = process.env.SAGE_MODEL || 'gemini-2.5-flash';
+const MODEL = process.env.SAGE_MODEL || 'gemini-3.8-flash';
 const MAX_BODY_BYTES = 80 * 1024;
 const MAX_MESSAGES = 12;
 const MAX_MESSAGE_CHARS = 4000;
