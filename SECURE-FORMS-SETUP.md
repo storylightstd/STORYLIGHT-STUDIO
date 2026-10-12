@@ -4,8 +4,9 @@ The website now uses two server-side Vercel functions:
 
 - `POST /api/contact` — contact inquiries with an optional PDF/DOCX manuscript attachment.
 - `POST /api/review` — author review submissions.
+- `POST /api/newsletter` — newsletter signup requests.
 
-Both functions send only after validation succeeds and only report success after the email provider confirms delivery.
+All three functions send only after validation succeeds and only report success after the email provider confirms delivery. Contact, review, and newsletter messages are delivered to `info@storylightstd.org`. The founder’s direct address, `hannah@storylightstd.org`, is shown as a clickable direct-contact option and is not used as the newsletter recipient.
 
 ## Required Vercel environment variables
 
@@ -28,6 +29,8 @@ SITE_ORIGIN=https://storylight-studio.vercel.app
 6. Redeploy after saving the variables.
 
 Until `RESEND_API_KEY` and `RESEND_FROM_EMAIL` are configured, the endpoints intentionally return a temporary-unavailable response instead of pretending that a submission was delivered.
+
+The public website accepts requests from `storylightstd.org`, `www.storylightstd.org`, and the Vercel deployment origin. The same-origin protection rejects unrelated origins.
 
 ## Upload protections
 
