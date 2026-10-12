@@ -102,7 +102,8 @@ export default async function handler(req: IncomingMessage, res: ServerResponse)
     });
 
     if (!providerResponse.ok) {
-      console.error('sage provider error', providerResponse.status);
+      const providerError = await providerResponse.text();
+      console.error('sage provider error', providerResponse.status, providerError.slice(0, 500));
       return json(res, 502, { ok: false, error: 'Sage could not complete that answer. Please try again.' });
     }
 
