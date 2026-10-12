@@ -1,6 +1,12 @@
 import type { IncomingMessage, ServerResponse } from 'node:http';
 
 const SITE_ORIGIN = process.env.SITE_ORIGIN || 'https://storylight-studio.vercel.app';
+const ALLOWED_ORIGINS = new Set([
+  ...SITE_ORIGIN.split(',').map(origin => origin.trim()).filter(Boolean),
+  'https://storylight-studio.vercel.app',
+  'https://www.storylightstd.org',
+  'https://storylightstd.org',
+]);
 const MODEL = process.env.SAGE_MODEL || 'gemini-3.8-flash';
 const MAX_BODY_BYTES = 80 * 1024;
 const MAX_MESSAGES = 12;
@@ -75,7 +81,7 @@ export default async function handler(req: IncomingMessage, res: ServerResponse)
   }
 
   const origin = req.headers.origin;
-  if (origin && origin !== SITE_ORIGIN) return json(res, 403, { ok: false, error: 'Unable to process this request.' });
+  if (origin && !ALLOWED_ORIGINS.has(origin)) return json(res, 403, { ok: false, error: 'Unable to process this request.' });
 
   const clientKey = String(req.headers['x-forwarded-for'] || req.socket.remoteAddress || 'unknown').split(',')[0].trim();
   const now = Date.now();
