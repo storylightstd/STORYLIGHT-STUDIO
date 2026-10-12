@@ -43,6 +43,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 info@storylightstd.org
               </a>
             </div>
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-[#CBD5E1]">
+              <a href="mailto:hannah@storylightstd.org" className="hover:text-white transition-colors underline-offset-4 hover:underline">Contact founder: hannah@storylightstd.org</a>
+              <button onClick={() => handleNav('contact')} className="font-semibold text-[#D4AF37] hover:text-[#F3E5AB] transition-colors">Contact Us <span aria-hidden="true">→</span></button>
+            </div>
           </div>
 
           {/* Column 2: Studio Navigation */}

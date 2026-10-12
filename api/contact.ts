@@ -13,6 +13,12 @@ const MAX_FILE_BYTES = 10 * 1024 * 1024;
 const MAX_FIELD_BYTES = 50 * 1024;
 const RECIPIENT = process.env.CONTACT_RECIPIENT_EMAIL || 'info@storylightstd.org';
 const SITE_ORIGIN = process.env.SITE_ORIGIN || 'https://storylight-studio.vercel.app';
+const ALLOWED_ORIGINS = new Set([
+  ...SITE_ORIGIN.split(',').map(origin => origin.trim()).filter(Boolean),
+  'https://storylight-studio.vercel.app',
+  'https://www.storylightstd.org',
+  'https://storylightstd.org',
+]);
 const ALLOWED_EXTENSIONS = new Set(['.pdf', '.docx']);
 const ALLOWED_MIME_TYPES = new Set([
   'application/pdf',
@@ -132,7 +138,7 @@ export default async function handler(req: IncomingMessage, res: ServerResponse)
   }
 
   const origin = req.headers.origin;
-  if (origin && origin !== SITE_ORIGIN) {
+  if (origin && !ALLOWED_ORIGINS.has(origin)) {
     return json(res, 403, { ok: false, error: 'Unable to process this submission.' });
   }
 

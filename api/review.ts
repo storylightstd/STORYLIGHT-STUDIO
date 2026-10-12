@@ -4,6 +4,12 @@ import type { IncomingMessage, ServerResponse } from 'node:http';
 export const config = { api: { bodyParser: { sizeLimit: '100kb' } } };
 const RECIPIENT = process.env.CONTACT_RECIPIENT_EMAIL || 'info@storylightstd.org';
 const SITE_ORIGIN = process.env.SITE_ORIGIN || 'https://storylight-studio.vercel.app';
+const ALLOWED_ORIGINS = new Set([
+  ...SITE_ORIGIN.split(',').map(origin => origin.trim()).filter(Boolean),
+  'https://storylight-studio.vercel.app',
+  'https://www.storylightstd.org',
+  'https://storylightstd.org',
+]);
 const recentSubmissions = new Map<string, number>();
 const RATE_WINDOW_MS = 15 * 60 * 1000;
 const RATE_LIMIT_INTERVAL_MS = RATE_WINDOW_MS / 5;
@@ -37,7 +43,7 @@ export default async function handler(req: IncomingMessage, res: ServerResponse)
     return json(res, 405, { ok: false, error: 'Method not allowed' });
   }
   const origin = req.headers.origin;
-  if (origin && origin !== SITE_ORIGIN) return json(res, 403, { ok: false, error: 'Unable to process this submission.' });
+  if (origin && !ALLOWED_ORIGINS.has(origin)) return json(res, 403, { ok: false, error: 'Unable to process this submission.' });
 
   const clientKey = String(req.headers['x-forwarded-for'] || req.socket.remoteAddress || 'unknown').split(',')[0].trim();
   const now = Date.now();

@@ -11,6 +11,9 @@
     },
     "api/sage.ts": {
       "maxDuration": 30
+    },
+    "api/newsletter.ts": {
+      "maxDuration": 15
     }
   }
 }

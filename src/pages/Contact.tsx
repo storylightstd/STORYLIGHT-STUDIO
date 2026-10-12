@@ -342,13 +342,21 @@ export const Contact: React.FC<ContactProps> = ({
               <div className="flex items-start gap-3">
                 <Mail className="w-4 h-4 text-[#D4AF37] shrink-0 mt-0.5" />
                 <div>
-                  <span className="text-[#94A3B8] block">Direct Executive Email:</span>
+                  <span className="text-[#94A3B8] block">Studio inbox:</span>
                   <a
                     href="mailto:info@storylightstd.org"
                     className="text-white hover:text-[#D4AF37] font-medium transition-colors"
                   >
                     info@storylightstd.org
                   </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <Mail className="w-4 h-4 text-[#D4AF37] shrink-0 mt-0.5" />
+                <div>
+                  <span className="text-[#94A3B8] block">Speak directly with the founder:</span>
+                  <a href="mailto:hannah@storylightstd.org" className="text-white hover:text-[#D4AF37] font-medium transition-colors">hannah@storylightstd.org</a>
                 </div>
               </div>
 
@@ -367,6 +375,15 @@ export const Contact: React.FC<ContactProps> = ({
                   <span className="text-[#D4AF37] font-medium">100% White-Hat · Verified Methodology</span>
                 </div>
               </div>
+            </div>
+          </div>
+
+          <div className="rounded-xl border border-[#D4AF37]/25 bg-[#D4AF37]/[0.06] p-6 space-y-3">
+            <h4 className="text-base font-editorial font-bold text-white">Prefer to write directly?</h4>
+            <p className="text-xs leading-relaxed text-[#CBD5E1]">Use the secure form for a structured inquiry, email the studio for general questions, or contact Hannah directly if your message is specifically for the founder.</p>
+            <div className="flex flex-wrap gap-3 text-xs font-semibold">
+              <a href="mailto:info@storylightstd.org" className="inline-flex items-center gap-1.5 rounded border border-white/15 px-3 py-2 text-white hover:border-[#D4AF37] hover:text-[#F3E5AB]">Email the studio <ArrowRight className="w-3.5 h-3.5" /></a>
+              <a href="mailto:hannah@storylightstd.org" className="inline-flex items-center gap-1.5 rounded border border-[#D4AF37]/50 px-3 py-2 text-[#F3E5AB] hover:bg-[#D4AF37]/10">Email Hannah <ArrowRight className="w-3.5 h-3.5" /></a>
             </div>
           </div>
 
