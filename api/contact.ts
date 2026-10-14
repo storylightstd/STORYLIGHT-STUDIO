@@ -216,6 +216,8 @@ export default async function handler(req: IncomingMessage, res: ServerResponse)
     });
 
     if (!providerResponse.ok) {
+      const providerError = await providerResponse.text();
+      console.error('contact delivery rejected', providerResponse.status, providerError.slice(0, 500));
       return json(res, 502, { ok: false, error: 'The submission could not be delivered. Please try again later.' });
     }
 
